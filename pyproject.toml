@@ -1,0 +1,29 @@
+[project]
+name = "similarity-search-chroma-db-example-1"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "chromadb==1.5.5",
+    "sentence-transformers==5.3.0",
+    ]
+
+[tool.black]
+line-length = 120
+target-version = ["py312"]
+skip-string-normalization = false
+include = "\\.pyi?$"
+exclude = "(\\.venv|\\.git|\\.mypy_cache|\\.pytest_cache|build|dist)"
+
+[tool.isort]
+profile = "black"
+line_length = 120
+known_first_party = ""
+known_third_party = ""
+
+[tool.ruff]
+line-length = 120
+select = ["E", "F", "I", "R", "W", "C", "Q", "B", "S", "N"]
+ignore = ["E501"]
+exclude = [".venv", ".git", "build", "dist"]
